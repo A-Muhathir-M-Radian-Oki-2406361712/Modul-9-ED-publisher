@@ -10,3 +10,5 @@ Artinya publisher dan subscriber adalah user yang sama karena username-password 
 ![RabbitMQ first run](img/rabbitmq_firstrun.png)
 Gambar: RabbitMQ di lokal
 
+![Publishing user creation](img/cli_publish.png)
+Gambar: Subscriber-Docker-Publisher
