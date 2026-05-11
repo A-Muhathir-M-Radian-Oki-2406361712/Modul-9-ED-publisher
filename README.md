@@ -15,3 +15,17 @@ Gambar: Subscriber-Docker-Publisher
 
 ![Another publishing](img/rabbitmq_republish.png)
 Gambar: Laporan publish dua kali
+
+![Another publishing](img/rabbitmq_slowsubscriber.png)
+Gambar: Setelah implementasi threads-sleep
+
+## Refleksi - 1 
+Merujuk ke gambar ke-2, melalui RabbitMQ, subscriber menerima event user_creation dari publisher.
+
+## Refleksi - 2
+Merujuk ke gambar ke-3, spike ada dua karena publish dilakukan sebanyak dua kali, grafik memperlihatkan event publishing selama 10 menit terakhir.
+
+## Refleksi - 3
+Merujuk ke gambar ke-4, sudah diterapkan thread-sleep. Queued message menunjukkan ke angka 1.0 berarti hanya ada satu message yang mengantre (tertunda) di RabbitMQ.
+
+
