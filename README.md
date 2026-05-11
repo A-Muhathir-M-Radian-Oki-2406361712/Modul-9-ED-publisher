@@ -19,6 +19,12 @@ Gambar: Laporan publish dua kali
 ![Another publishing](img/rabbitmq_slowsubscriber.png)
 Gambar: Setelah implementasi threads-sleep
 
+![Another publishing](img/cli_run3subscriber.png)
+Gambar: Simulasi running tiga subscriber
+
+![Another publishing](img/rabbitmq_monitor3subscriber.png)
+Gambar: Laporan simulasi tiga subscriber
+
 ## Refleksi - 1 
 Merujuk ke gambar ke-2, melalui RabbitMQ, subscriber menerima event user_creation dari publisher.
 
@@ -28,4 +34,5 @@ Merujuk ke gambar ke-3, spike ada dua karena publish dilakukan sebanyak dua kali
 ## Refleksi - 3
 Merujuk ke gambar ke-4, sudah diterapkan thread-sleep. Queued message menunjukkan ke angka 1.0 berarti hanya ada satu message yang mengantre (tertunda) di RabbitMQ.
 
-
+## Refleksi - 4
+Merujuk ke gambar ke-5 dan 6, ketika thread sleep ditambahkan dan simulasi tiga subscriber dijalankan bersamaan pada queue yang sama, event dari publisher akan terbagi secara bergantian kepada ketiga subscriber tersebut. Hal ini terjadi karena RabbitMQ secara default menerapkan metode Round-Robin Dispatching (pola Work Queues / Competing Consumers) untuk mendistribusikan beban kerja secara merata. Thread sleep berfungsi untuk mensimulasikan processing time yang memakan waktu, sehingga kita bisa melihat secara langsung bagaimana sistem melakukan load balancing antar subscriber.
