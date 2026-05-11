@@ -12,3 +12,6 @@ Gambar: RabbitMQ di lokal
 
 ![Publishing user creation](img/cli_publish.png)
 Gambar: Subscriber-Docker-Publisher
+
+![Another publishing](img/rabbitmq_republish.png)
+Gambar: Laporan publish dua kali
